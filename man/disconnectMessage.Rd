@@ -56,7 +56,7 @@ that might cause the shiny app to lose connection to its server.\cr\cr
 Call \code{disonnectMessage()}
 anywhere in a Shiny app's UI to add a nice message when this happens. The message works both
 locally (running Shiny apps within RStudio) and on Shiny servers (such as shinyapps.io,
-RStudio Connect, Shiny Server Open Source, Shiny Server Pro).
+RStudio Connect, Shiny Server Open Source, Shiny Server Pro).\cr\cr See the \href{https://daattali.com/shiny/shinydisconnect-demo}{demo Shiny app} online for examples.
 }
 \examples{
 if (interactive()) {

@@ -6,7 +6,8 @@
 #' Call `disonnectMessage()`
 #' anywhere in a Shiny app's UI to add a nice message when this happens. The message works both
 #' locally (running Shiny apps within RStudio) and on Shiny servers (such as shinyapps.io,
-#' RStudio Connect, Shiny Server Open Source, Shiny Server Pro).
+#' RStudio Connect, Shiny Server Open Source, Shiny Server Pro).\cr\cr See the [demo
+#' Shiny app](https://daattali.com/shiny/shinydisconnect-demo) online for examples.
 #'
 #' @param text The text to show in the message.
 #' @param refresh The text to show in a link that allows the user to refresh the page.

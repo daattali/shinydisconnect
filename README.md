@@ -3,7 +3,7 @@
 [![CRAN
 version](https://www.r-pkg.org/badges/version/shinydisconnect)](https://cran.r-project.org/package=shinydisconnect)
 
-> Copyright 2020 [Dean Attali](https://deanattali.com). Licensed under the MIT license.
+> [Demo](https://daattali.com/shiny/shinydisconnect-demo) &middot; Copyright 2020 [Dean Attali](https://deanattali.com) &middot; Licensed under the MIT license
 
 A shiny app can disconnect for a variety of reasons: an unrecoverable error occurred in the app, the server went down, the user's internet connection died, or any other reason that might cause the shiny app to lose connection to its server.
 
