@@ -61,7 +61,7 @@ if (interactive()) {
       disconnectMessage(),
       actionButton("disconnect", "Disconnect the app")
     ),
-    server = function(input, output) {
+    server = function(input, output, session) {
       observeEvent(input$disconnect, {
         session$close()
       })
