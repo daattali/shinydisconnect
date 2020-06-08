@@ -1,0 +1,23 @@
+Package: shinydisconnect
+Title: Show A Nice Message When A Shiny App Disconnects
+Version: 0.0.0.9000
+Authors@R: c(
+    person(given = "Dean",
+           family = "Attali",
+           role = c("aut"),
+           email = "daattali@gmail.com"))
+Description: TODO  
+URL: https://github.com/daattali/shinydisconnect
+BugReports: https://github.com/daattali/shinydisconnect/issues
+Imports: 
+  checkmate,
+  glue,
+  htmltools,
+  shiny (>= 1.0)
+Depends: 
+    R (>= 3.0.0)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
