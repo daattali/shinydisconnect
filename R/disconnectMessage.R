@@ -2,7 +2,8 @@
 #'
 #' A shiny app can disconnect for a variety of reasons: an unrecoverable error occurred in
 #' the app, the server went down, the user's internet connection died, or any other reason
-#' that might cause the shiny app to lose connection to its server. Call `disonnectMessage()`
+#' that might cause the shiny app to lose connection to its server.\cr\cr
+#' Call `disonnectMessage()`
 #' anywhere in a Shiny app's UI to add a nice message when this happens. The message works both
 #' locally (running Shiny apps within RStudio) and on Shiny servers (such as shinyapps.io,
 #' RStudio Connect, Shiny Server Open Source, Shiny Server Pro).
@@ -10,7 +11,11 @@
 #' @param text The text to show in the message.
 #' @param refresh The text to show in a link that allows the user to refresh the page.
 #' Use `refresh = ""` if you don't want to show a refresh link.
-#' @param size The size of the message, one of "s", "m", "l" (small, medium, or large).
+#' @param width The width of the message box. Must be either an integer, or the string
+#' `"full"` to make the message take up the entire page width.
+#' @param top The position of the message, measured from the top of the page. Must be either
+#' an integer, or the string `"center"` to make the box vertically centered.
+#' @param size The font size of the text.
 #' @param background The background colour of the message box.
 #' @param colour The colour of the text of the message box.
 #' @param overlayColour The colour of the overlay to draw on the page behind the message box.
@@ -18,6 +23,7 @@
 #' `overlayOpacity = 0` to disable the overlay.
 #' @param overlayOpacity The opacity of the overlay, from 0 (fully transparent) to 1
 #' (fully opaque). Use `overlayOpacity = 0` to disable the overlay.
+#' @param refreshColor The colour of the refresh text link
 #' @examples
 #' if (interactive()) {
 #'   library(shiny)
@@ -37,33 +43,41 @@
 disconnectMessage <- function(
   text = "An error occured. Please refresh the page and try again.",
   refresh = "Refresh",
-  size = "m",
+  width = 450,
+  top = 50,
+  size = 22,
   background = "white",
   colour = "#444444",
   overlayColour = "black",
-  overlayOpacity = 0.6
+  overlayOpacity = 0.6,
+  refreshColour = "#337ab7"
 ) {
 
   checkmate::assert_string(text, min.chars = 1)
   checkmate::assert_string(refresh)
-  checkmate::assert_string(size)
+  checkmate::assert_numeric(size, lower = 0)
   checkmate::assert_string(background)
   checkmate::assert_string(colour)
   checkmate::assert_string(overlayColour)
   checkmate::assert_number(overlayOpacity, lower = 0, upper = 1)
-  if (!size %in% c("s", "m", "l")) {
-    stop("disconnectMessage: 'size' must be one of: 's', 'm', 'l'.", call. = FALSE)
+  checkmate::assert_string(refreshColour)
+
+  if (width == "full") {
+    width <- "100%"
+  } else if (is.numeric(width) && width >= 0) {
+    width <- paste0(width, "px")
+  } else {
+    stop("disconnectMessage: 'width' must be either an integer, or the string \"full\".", call. = FALSE)
   }
 
-  if (size == "s") {
-    width <- 300
-    font <- 14
-  } else if (size == "m") {
-    width <- 450
-    font <- 20
-  } else if (size == "l") {
-    width <- 600
-    font <- 26
+  if (top == "center") {
+    top <- "50%"
+    ytransform <- "-50%"
+  } else if (is.numeric(top) && top >= 0) {
+    top <- paste0(top, "px")
+    ytransform <- "0"
+  } else {
+    stop("disconnectMessage: 'top' must be either an integer, or the string \"center\".", call. = FALSE)
   }
 
   htmltools::tagList(
@@ -91,11 +105,11 @@ disconnectMessage <- function(
           "#ss-connect-dialog {
              background: {{background}} !important;
              color: {{colour}} !important;
-             width: {{width}}px !important;
-             margin-left: -{{width/2}}px !important;
-             font-size: {{font}}px !important;
+             width: {{width}} !important;
+             transform: translateX(-50%) translateY({{ytransform}}) !important;
+             font-size: {{size}}px !important;
+             top: {{top}} !important;
              position: fixed !important;
-             top: 50px !important;
              bottom: auto !important;
              left: 50% !important;
              padding: 1em 1.5em !important;
@@ -113,14 +127,15 @@ disconnectMessage <- function(
 
           "#ss-connect-dialog a {
              display: {{ if (refresh == '') 'none' else 'block' }} !important;
+             color: {{refreshColour}} !important;
              font-size: 0 !important;
-             margin-top: {{font}}px !important;
+             margin-top: {{size}}px !important;
              font-weight: normal !important;
           }",
 
           "#ss-connect-dialog a::before {
             content: '{{refresh}}';
-            font-size: {{font}}px;
+            font-size: {{size}}px;
           }"
         )
       )

@@ -1,10 +1,9 @@
 # shinydisconnect - Show a nice message when a Shiny app disconnects or errors
 
-<a href="https://cran.r-project.org/package=shinydisconnect">
-<img src="https://www.r-pkg.org/badges/version/shinydisconnect" alt="CRAN version" />
-</a>
+[![CRAN
+version](https://www.r-pkg.org/badges/version/shinydisconnect)](https://cran.r-project.org/package=shinydisconnect)
 
-> Copyright 2020 Dean Attali. Licensed under the MIT license.
+> Copyright 2020 [Dean Attali](https://deanattali.com). Licensed under the MIT license.
 
 ## Overview
 
@@ -42,7 +41,6 @@ Without using this package, a shiny app that disconnects will either just show a
 Example basic usage:
 
 ```
-library(shiny)
 shinyApp(
   ui = fluidPage(
     disconnectMessage(),
@@ -58,7 +56,7 @@ shinyApp(
 
 ![basic screenshot](inst/img/basic.PNG)
 
-Example advanced usage:
+Example parameters:
 
 ```
 shinyApp(
@@ -69,7 +67,8 @@ shinyApp(
       background = "#f89f43",
       colour = "white",
       overlayColour = "grey",
-      overlayOpacity = 0.3
+      overlayOpacity = 0.3,
+      refreshColour = "brown"
     ),
     actionButton("disconnect", "Disconnect the app")
   ),
@@ -82,3 +81,31 @@ shinyApp(
 ```
 
 ![advanced screenshot](inst/img/advanced.PNG)
+
+Example with full width and vertically centered message:
+
+```
+shinyApp(
+  ui = fluidPage(
+    disconnectMessage(
+      text = "Your session has timed out.",
+      refresh = "",
+      background = "#aaa",
+      size = 36,
+      width = "full",
+      top = "center",
+      colour = "white",
+      overlayColour = "#999",
+      overlayOpacity = 0.4
+    ),
+    actionButton("disconnect", "Disconnect the app")
+  ),
+  server = function(input, output) {
+    observeEvent(input$disconnect, {
+      session$close()
+    })
+  }
+)
+```
+
+![full screenshot](inst/img/full.PNG)

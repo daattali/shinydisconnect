@@ -7,11 +7,14 @@
 disconnectMessage(
   text = "An error occured. Please refresh the page and try again.",
   refresh = "Refresh",
-  size = "m",
+  width = 450,
+  top = 50,
+  size = 22,
   background = "white",
   colour = "#444444",
   overlayColour = "black",
-  overlayOpacity = 0.6
+  overlayOpacity = 0.6,
+  refreshColour = "#337ab7"
 )
 }
 \arguments{
@@ -20,7 +23,13 @@ disconnectMessage(
 \item{refresh}{The text to show in a link that allows the user to refresh the page.
 Use \code{refresh = ""} if you don't want to show a refresh link.}
 
-\item{size}{The size of the message, one of "s", "m", "l" (small, medium, or large).}
+\item{width}{The width of the message box. Must be either an integer, or the string
+\code{"full"} to make the message take up the entire page width.}
+
+\item{top}{The position of the message, measured from the top of the page. Must be either
+an integer, or the string \code{"center"} to make the box vertically centered.}
+
+\item{size}{The font size of the text.}
 
 \item{background}{The background colour of the message box.}
 
@@ -32,11 +41,14 @@ An overlay is used to "grey out" the application and draw attention to the messa
 
 \item{overlayOpacity}{The opacity of the overlay, from 0 (fully transparent) to 1
 (fully opaque). Use \code{overlayOpacity = 0} to disable the overlay.}
+
+\item{refreshColor}{The colour of the refresh text link}
 }
 \description{
 A shiny app can disconnect for a variety of reasons: an unrecoverable error occurred in
 the app, the server went down, the user's internet connection died, or any other reason
-that might cause the shiny app to lose connection to its server. Call \code{disonnectMessage()}
+that might cause the shiny app to lose connection to its server.\cr\cr
+Call \code{disonnectMessage()}
 anywhere in a Shiny app's UI to add a nice message when this happens. The message works both
 locally (running Shiny apps within RStudio) and on Shiny servers (such as shinyapps.io,
 RStudio Connect, Shiny Server Open Source, Shiny Server Pro).
