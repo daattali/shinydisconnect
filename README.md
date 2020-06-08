@@ -7,7 +7,7 @@ version](https://www.r-pkg.org/badges/version/shinydisconnect)](https://cran.r-p
 
 A shiny app can disconnect for a variety of reasons: an unrecoverable error occurred in the app, the server went down, the user's internet connection died, or any other reason that might cause the shiny app to lose connection to its server.
 
-`shinydisconnect` allows you to add a nice message to the user when the app disconnects.  The message works both locally (running Shiny apps within RStudio) and on Shiny servers (such as shinyapps.io, RStudio Connect, Shiny Server Open Source, Shiny Server Pro).
+`shinydisconnect` allows you to add a nice message to the user when the app disconnects.  The message works both locally (running Shiny apps within RStudio) and on Shiny servers (such as shinyapps.io, RStudio Connect, Shiny Server Open Source, Shiny Server Pro). See the [demo Shiny app](https://daattali.com/shiny/shinydisconnect-demo/) online for examples.
 
 **If you find shinydisconnect useful, please consider supporting my work\!**
 
@@ -33,7 +33,7 @@ Example 2: using parameters ([code](inst/examples/advanced/app.R))
 
 Example 3: full-width and vertically centered ([code](inst/examples/special/app.R))
 
-![basic screenshot](inst/img/special.png)
+![basic screenshot](inst/img/special.PNG)
 
 ## Installation
 

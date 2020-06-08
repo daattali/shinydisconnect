@@ -4,7 +4,7 @@ ui <- fluidPage(
   disconnectMessage(
     text = "Your session has timed out.",
     refresh = "",
-    background = "#aaa",
+    background = "#646464e6",
     size = 36,
     width = "full",
     top = "center",

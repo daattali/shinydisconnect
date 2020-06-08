@@ -117,7 +117,7 @@ disconnectMessage <- function(
              position: fixed !important;
              bottom: auto !important;
              left: 50% !important;
-             padding: 1em 1.5em !important;
+             padding: 0.8em 1.5em !important;
              text-align: center !important;
              height: auto !important;
              opacity: 1 !important;

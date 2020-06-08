@@ -1,6 +1,6 @@
 Package: shinydisconnect
 Title: Show a Nice Message When a 'Shiny' App Disconnects or Errors
-Version: 0.0.0.9000
+Version: 0.1
 Authors@R: person(given = "Dean", family = "Attali", email = "daattali@gmail.com",
     role = c("aut", "cre"))
 Description: A shiny app can disconnect for a variety of reasons: an unrecoverable error occurred in
@@ -8,7 +8,8 @@ Description: A shiny app can disconnect for a variety of reasons: an unrecoverab
     that might cause the shiny app to lose connection to its server. Call `disonnectMessage()`
     anywhere in a Shiny app's UI to add a nice message when this happens. The message works both
     locally (running Shiny apps within RStudio) and on Shiny servers (such as shinyapps.io,
-    RStudio Connect, Shiny Server Open Source, Shiny Server Pro).  
+    RStudio Connect, Shiny Server Open Source, Shiny Server Pro). See demo online at 
+    <https://daattali.com/shiny/shinydisconnect-demo>.
 URL: https://github.com/daattali/shinydisconnect
 BugReports: https://github.com/daattali/shinydisconnect/issues
 Imports: 
@@ -16,6 +17,8 @@ Imports:
     glue,
     htmltools,
     shiny (>= 1.0)
+Suggests:
+    colourpicker
 Depends: 
     R (>= 3.0.0)
 License: MIT + file LICENSE
