@@ -29,11 +29,11 @@ Example 1: basic usage ([code](inst/examples/basic/app.R))
 
 Example 2: using parameters ([code](inst/examples/advanced/app.R))
 
-![basic screenshot](inst/img/advanced.PNG)
+![advanced screenshot](inst/img/advanced.PNG)
 
 Example 3: full-width and vertically centered ([code](inst/examples/special/app.R))
 
-![basic screenshot](inst/img/special.PNG)
+![special screenshot](inst/img/special.png)
 
 ## Installation
 
