@@ -1,3 +1,4 @@
+library(shiny)
 library(shinydisconnect)
 
 ui <- fluidPage(
