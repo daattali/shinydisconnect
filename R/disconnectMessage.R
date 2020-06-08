@@ -1,4 +1,4 @@
-#' Show a nice message when a shiny app disconnects
+#' Show a nice message when a shiny app disconnects or errors
 #'
 #' A shiny app can disconnect for a variety of reasons: an unrecoverable error occurred in
 #' the app, the server went down, the user's internet connection died, or any other reason
@@ -13,7 +13,7 @@
 #' Use `refresh = ""` if you don't want to show a refresh link.
 #' @param width The width of the message box. Must be either an integer, or the string
 #' `"full"` to make the message take up the entire page width.
-#' @param top The position of the message, measured from the top of the page. Must be either
+#' @param top The distance of the message from the top of the page. Must be either
 #' an integer, or the string `"center"` to make the box vertically centered.
 #' @param size The font size of the text.
 #' @param background The background colour of the message box.
@@ -24,6 +24,9 @@
 #' @param overlayOpacity The opacity of the overlay, from 0 (fully transparent) to 1
 #' (fully opaque). Use `overlayOpacity = 0` to disable the overlay.
 #' @param refreshColor The colour of the refresh text link
+#' @param css Any additional CSS rules to apply to the message box. For example,
+#' `css = "padding: 0 !important; border: 3px solid red;"` will remove padding and add a border.
+#' Note that you may need to use the `!important` rule to override default styles.
 #' @examples
 #' if (interactive()) {
 #'   library(shiny)
@@ -50,7 +53,8 @@ disconnectMessage <- function(
   colour = "#444444",
   overlayColour = "black",
   overlayOpacity = 0.6,
-  refreshColour = "#337ab7"
+  refreshColour = "#337ab7",
+  css = ""
 ) {
 
   checkmate::assert_string(text, min.chars = 1)
@@ -61,6 +65,7 @@ disconnectMessage <- function(
   checkmate::assert_string(overlayColour)
   checkmate::assert_number(overlayOpacity, lower = 0, upper = 1)
   checkmate::assert_string(refreshColour)
+  checkmate::assert_string(css)
 
   if (width == "full") {
     width <- "100%"
@@ -136,7 +141,9 @@ disconnectMessage <- function(
           "#ss-connect-dialog a::before {
             content: '{{refresh}}';
             font-size: {{size}}px;
-          }"
+          }",
+
+          "#ss-connect-dialog { {{ htmltools::HTML(css) }} }"
         )
       )
     )

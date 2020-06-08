@@ -2,7 +2,7 @@
 % Please edit documentation in R/disconnectMessage.R
 \name{disconnectMessage}
 \alias{disconnectMessage}
-\title{Show a nice message when a shiny app disconnects}
+\title{Show a nice message when a shiny app disconnects or errors}
 \usage{
 disconnectMessage(
   text = "An error occured. Please refresh the page and try again.",
@@ -14,7 +14,8 @@ disconnectMessage(
   colour = "#444444",
   overlayColour = "black",
   overlayOpacity = 0.6,
-  refreshColour = "#337ab7"
+  refreshColour = "#337ab7",
+  css = ""
 )
 }
 \arguments{
@@ -26,7 +27,7 @@ Use \code{refresh = ""} if you don't want to show a refresh link.}
 \item{width}{The width of the message box. Must be either an integer, or the string
 \code{"full"} to make the message take up the entire page width.}
 
-\item{top}{The position of the message, measured from the top of the page. Must be either
+\item{top}{The distance of the message from the top of the page. Must be either
 an integer, or the string \code{"center"} to make the box vertically centered.}
 
 \item{size}{The font size of the text.}
@@ -41,6 +42,10 @@ An overlay is used to "grey out" the application and draw attention to the messa
 
 \item{overlayOpacity}{The opacity of the overlay, from 0 (fully transparent) to 1
 (fully opaque). Use \code{overlayOpacity = 0} to disable the overlay.}
+
+\item{css}{Any additional CSS rules to apply to the message box. For example,
+\code{css = "padding: 0 !important; border: 3px solid red;"} will remove padding and add a border.
+Note that you may need to use the \code{!important} rule to override default styles.}
 
 \item{refreshColor}{The colour of the refresh text link}
 }
