@@ -78,7 +78,7 @@ fluidPage(
         "input.show_refresh",
         textInput("refresh", "Refresh text", "Refresh")
       ),
-      sliderInput("size", "Font size", min = 10, max = 50, value = 22)
+      sliderInput("size", "Font size", min = 10, max = 70, value = 22)
     ),
     column(
       3,
