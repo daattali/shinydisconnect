@@ -36,7 +36,7 @@ fluidPage(
              alt="Fork me on GitHub")
   ),
 
-  shinydisconnect:::getLocalTags(),
+  shinydisconnect::disconnectMessage2(),
 
   div(
     id = "header",
