@@ -23,15 +23,15 @@ A shiny app can disconnect for a variety of reasons: an unrecoverable error occu
 
 ## Examples
 
-Example 1: basic usage ([code](inst/examples/basic/app.R))
+**Example 1: basic usage ([code](inst/examples/basic/app.R))**
 
 ![basic screenshot](inst/img/basic.PNG)
 
-Example 2: using parameters ([code](inst/examples/advanced/app.R))
+**Example 2: using parameters ([code](inst/examples/advanced/app.R))**
 
 ![advanced screenshot](inst/img/advanced.PNG)
 
-Example 3: full-width and vertically centered ([code](inst/examples/special/app.R))
+**Example 3: full-width and vertically centered ([code](inst/examples/special/app.R))**
 
 You can also use `disconnectMessage2()` to get a similar message box to this one.
 
