@@ -33,6 +33,8 @@ Example 2: using parameters ([code](inst/examples/advanced/app.R))
 
 Example 3: full-width and vertically centered ([code](inst/examples/special/app.R))
 
+You can also use `disconnectMessage2()` to get a similar message box to this one.
+
 ![special screenshot](inst/img/special.png)
 
 ## Installation

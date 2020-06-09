@@ -61,6 +61,13 @@ fluidPage(
       br(), br()
     )
   )),
+  fluidRow(column(
+    width = 6, offset = 3,
+    div(
+      actionLink("set1", "Use pre-set parameters #1"), HTML("&middot;"),
+      actionLink("set2", "Use pre-set parameters #2")
+    )
+  )),
   fluidRow(
     column(
       3,
@@ -70,7 +77,8 @@ fluidPage(
       conditionalPanel(
         "input.show_refresh",
         textInput("refresh", "Refresh text", "Refresh")
-      )
+      ),
+      sliderInput("size", "Font size", min = 10, max = 50, value = 22)
     ),
     column(
       3,
@@ -81,7 +89,7 @@ fluidPage(
         "input.show_refresh",
         colourpicker::colourInput("refreshColour", "Refresh text colour", "#337ab7", showColour = "background")
       ),
-      sliderInput("size", "Font size", min = 10, max = 50, value = 22)
+      textAreaInput("css", "Custom CSS (advanced)", "")
     ),
     column(
       3,

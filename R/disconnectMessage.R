@@ -9,6 +9,9 @@
 #' RStudio Connect, Shiny Server Open Source, Shiny Server Pro).\cr\cr See the [demo
 #' Shiny app](https://daattali.com/shiny/shinydisconnect-demo) online for examples.
 #'
+#' You can also use [`disconnectMessage2()`] to use a pre-set combination of parameters
+#' that produce a large centered message.
+#'
 #' @param text The text to show in the message.
 #' @param refresh The text to show in a link that allows the user to refresh the page.
 #' Use `refresh = ""` if you don't want to show a refresh link.
@@ -151,28 +154,22 @@ disconnectMessage <- function(
   )
 }
 
-getLocalTags <- function() {
-  if (!isLocal()) {
-    return(NULL)
-  }
-
-  htmltools::tagList(
-    htmltools::tags$script(paste0(
-      "$(function() {",
-      "  $(document).on('shiny:disconnected', function(event) {",
-      "    $('#ss-connect-dialog').show();",
-      "    $('#ss-overlay').show();",
-      "  })",
-      "});"
-    )),
-    htmltools::tags$div(
-      id="ss-connect-dialog", style="display: none;",
-      htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);")
-    ),
-    htmltools::tags$div(id="ss-overlay", style="display: none;")
+#' Show a nice message when a shiny app disconnects or errors
+#'
+#' This function is a version of [`disconnectMessage()`] with a pre-set combination
+#' of parameters that result in a large centered message.
+#' @export
+disconnectMessage2 <- function() {
+  disconnectMessage(
+    text = "Your session has timed out.",
+    refresh = "",
+    size = 70,
+    colour = "white",
+    background = "rgba(64, 64, 64, 0.9)",
+    width = "full",
+    top = "center",
+    overlayColour = "#999",
+    overlayOpacity = 0.7,
+    css = "padding: 15px !important; box-shadow: 0 !important;"
   )
-}
-
-isLocal <- function() {
-  Sys.getenv("SHINY_PORT", "") == ""
 }

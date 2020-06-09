@@ -58,6 +58,10 @@ anywhere in a Shiny app's UI to add a nice message when this happens. The messag
 locally (running Shiny apps within RStudio) and on Shiny servers (such as shinyapps.io,
 RStudio Connect, Shiny Server Open Source, Shiny Server Pro).\cr\cr See the \href{https://daattali.com/shiny/shinydisconnect-demo}{demo Shiny app} online for examples.
 }
+\details{
+You can also use \code{\link[=disconnectMessage2]{disconnectMessage2()}} to use a pre-set combination of parameters
+that produce a large centered message.
+}
 \examples{
 if (interactive()) {
   library(shiny)
