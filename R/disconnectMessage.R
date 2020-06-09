@@ -170,6 +170,6 @@ disconnectMessage2 <- function() {
     top = "center",
     overlayColour = "#999",
     overlayOpacity = 0.7,
-    css = "padding: 15px !important; box-shadow: 0 !important;"
+    css = "padding: 15px !important; box-shadow: none !important;"
   )
 }

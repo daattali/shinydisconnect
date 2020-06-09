@@ -100,6 +100,6 @@ function(input, output, session) {
     updateSliderInput(session, "overlayOpacity", value = 0.7)
     updateCheckboxInput(session, "full_width", value = TRUE)
     updateCheckboxInput(session, "center", value = TRUE)
-    updateTextAreaInput(session, "css", value = "padding: 15px !important; box-shadow: 0 !important;")
+    updateTextAreaInput(session, "css", value = "padding: 15px !important; box-shadow: none !important;")
   })
 }
