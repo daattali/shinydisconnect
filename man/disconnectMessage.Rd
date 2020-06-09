@@ -5,7 +5,7 @@
 \title{Show a nice message when a shiny app disconnects or errors}
 \usage{
 disconnectMessage(
-  text = "An error occured. Please refresh the page and try again.",
+  text = "An error occurred. Please refresh the page and try again.",
   refresh = "Refresh",
   width = 450,
   top = 50,

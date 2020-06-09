@@ -72,7 +72,7 @@ fluidPage(
     column(
       3,
       h3("Text"),
-      textInput("text", "Message", "An error occured. Please refresh the page and try again."),
+      textInput("text", "Message", "An error occurred. Please refresh the page and try again."),
       checkboxInput("show_refresh", "Show a refresh button?", TRUE),
       conditionalPanel(
         "input.show_refresh",

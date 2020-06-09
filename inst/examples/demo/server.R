@@ -71,7 +71,7 @@ function(input, output, session) {
   })
 
   observeEvent(input$set1, {
-    updateTextInput(session, "text", value = "An error occured. Please refresh the page and try again.")
+    updateTextInput(session, "text", value = "An error occurred. Please refresh the page and try again.")
     updateCheckboxInput(session, "show_refresh", value = TRUE)
     updateTextInput(session, "refresh", value = "Refresh")
     colourpicker::updateColourInput(session, "background", value = "white")

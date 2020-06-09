@@ -48,7 +48,7 @@
 #' }
 #' @export
 disconnectMessage <- function(
-  text = "An error occured. Please refresh the page and try again.",
+  text = "An error occurred. Please refresh the page and try again.",
   refresh = "Refresh",
   width = 450,
   top = 50,
