@@ -1,31 +1,33 @@
 #' Show a nice message when a shiny app disconnects or errors
 #'
 #' A shiny app can disconnect for a variety of reasons: an unrecoverable error occurred in
-#' the app, the server went down, the user's internet connection died, or any other reason
+#' the app, the server went down, the user lost internet connection, or any other reason
 #' that might cause the shiny app to lose connection to its server.\cr\cr
 #' Call `disonnectMessage()`
-#' anywhere in a Shiny app's UI to add a nice message when this happens. The message works both
+#' anywhere in a Shiny app's UI to add a nice message when this happens. Works
 #' locally (running Shiny apps within RStudio) and on Shiny servers (such as shinyapps.io,
-#' RStudio Connect, Shiny Server Open Source, Shiny Server Pro).\cr\cr See the [demo
-#' Shiny app](https://daattali.com/shiny/shinydisconnect-demo) online for examples.
+#' RStudio Connect, Shiny Server Open Source, Shiny Server Pro).\cr\cr
+#' See the [demo Shiny app](https://daattali.com/shiny/shinydisconnect-demo) online for examples.\cr\cr
+#' Note that it's not possible to distinguish between errors and timeouts - they will both
+#' show the same message.
 #'
 #' You can also use [`disconnectMessage2()`] to use a pre-set combination of parameters
-#' that produce a large centered message.
+#' that produces a large centered message.
 #'
 #' @param text The text to show in the message.
 #' @param refresh The text to show in a link that allows the user to refresh the page.
 #' Use `refresh = ""` if you don't want to show a refresh link.
 #' @param width The width of the message box. Must be either an integer, or the string
 #' `"full"` to make the message take up the entire page width.
-#' @param top The distance of the message from the top of the page. Must be either
+#' @param top The distance from the message to the top of the page. Must be either
 #' an integer, or the string `"center"` to make the box vertically centered.
-#' @param size The font size of the text.
+#' @param size The font size of the text. (integer).
 #' @param background The background colour of the message box.
 #' @param colour The colour of the text of the message box.
 #' @param overlayColour The colour of the overlay to draw on the page behind the message box.
 #' An overlay is used to "grey out" the application and draw attention to the message. Use
 #' `overlayOpacity = 0` to disable the overlay.
-#' @param overlayOpacity The opacity of the overlay, from 0 (fully transparent) to 1
+#' @param overlayOpacity The opacity of the overlay, from 0 (fully transparent/not visible) to 1
 #' (fully opaque). Use `overlayOpacity = 0` to disable the overlay.
 #' @param refreshColor The colour of the refresh text link
 #' @param css Any additional CSS rules to apply to the message box. For example,
@@ -157,7 +159,7 @@ disconnectMessage <- function(
 #' Show a nice message when a shiny app disconnects or errors
 #'
 #' This function is a version of [`disconnectMessage()`] with a pre-set combination
-#' of parameters that result in a large centered message.
+#' of parameters that results in a large centered message.
 #' @export
 disconnectMessage2 <- function() {
   disconnectMessage(

@@ -8,5 +8,5 @@ disconnectMessage2()
 }
 \description{
 This function is a version of \code{\link[=disconnectMessage]{disconnectMessage()}} with a pre-set combination
-of parameters that result in a large centered message.
+of parameters that results in a large centered message.
 }

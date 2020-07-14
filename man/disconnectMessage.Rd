@@ -27,10 +27,10 @@ Use \code{refresh = ""} if you don't want to show a refresh link.}
 \item{width}{The width of the message box. Must be either an integer, or the string
 \code{"full"} to make the message take up the entire page width.}
 
-\item{top}{The distance of the message from the top of the page. Must be either
+\item{top}{The distance from the message to the top of the page. Must be either
 an integer, or the string \code{"center"} to make the box vertically centered.}
 
-\item{size}{The font size of the text.}
+\item{size}{The font size of the text. (integer).}
 
 \item{background}{The background colour of the message box.}
 
@@ -40,7 +40,7 @@ an integer, or the string \code{"center"} to make the box vertically centered.}
 An overlay is used to "grey out" the application and draw attention to the message. Use
 \code{overlayOpacity = 0} to disable the overlay.}
 
-\item{overlayOpacity}{The opacity of the overlay, from 0 (fully transparent) to 1
+\item{overlayOpacity}{The opacity of the overlay, from 0 (fully transparent/not visible) to 1
 (fully opaque). Use \code{overlayOpacity = 0} to disable the overlay.}
 
 \item{css}{Any additional CSS rules to apply to the message box. For example,
@@ -51,16 +51,19 @@ Note that you may need to use the \code{!important} rule to override default sty
 }
 \description{
 A shiny app can disconnect for a variety of reasons: an unrecoverable error occurred in
-the app, the server went down, the user's internet connection died, or any other reason
+the app, the server went down, the user lost internet connection, or any other reason
 that might cause the shiny app to lose connection to its server.\cr\cr
 Call \code{disonnectMessage()}
-anywhere in a Shiny app's UI to add a nice message when this happens. The message works both
+anywhere in a Shiny app's UI to add a nice message when this happens. Works
 locally (running Shiny apps within RStudio) and on Shiny servers (such as shinyapps.io,
-RStudio Connect, Shiny Server Open Source, Shiny Server Pro).\cr\cr See the \href{https://daattali.com/shiny/shinydisconnect-demo}{demo Shiny app} online for examples.
+RStudio Connect, Shiny Server Open Source, Shiny Server Pro).\cr\cr
+See the \href{https://daattali.com/shiny/shinydisconnect-demo}{demo Shiny app} online for examples.\cr\cr
+Note that it's not possible to distinguish between errors and timeouts - they will both
+show the same message.
 }
 \details{
 You can also use \code{\link[=disconnectMessage2]{disconnectMessage2()}} to use a pre-set combination of parameters
-that produce a large centered message.
+that produces a large centered message.
 }
 \examples{
 if (interactive()) {
