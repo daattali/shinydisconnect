@@ -43,11 +43,11 @@ An overlay is used to "grey out" the application and draw attention to the messa
 \item{overlayOpacity}{The opacity of the overlay, from 0 (fully transparent/not visible) to 1
 (fully opaque). Use \code{overlayOpacity = 0} to disable the overlay.}
 
+\item{refreshColour}{The colour of the refresh text link}
+
 \item{css}{Any additional CSS rules to apply to the message box. For example,
 \code{css = "padding: 0 !important; border: 3px solid red;"} will remove padding and add a border.
 Note that you may need to use the \code{!important} rule to override default styles.}
-
-\item{refreshColor}{The colour of the refresh text link}
 }
 \description{
 A shiny app can disconnect for a variety of reasons: an unrecoverable error occurred in

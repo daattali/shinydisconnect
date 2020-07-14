@@ -29,7 +29,7 @@
 #' `overlayOpacity = 0` to disable the overlay.
 #' @param overlayOpacity The opacity of the overlay, from 0 (fully transparent/not visible) to 1
 #' (fully opaque). Use `overlayOpacity = 0` to disable the overlay.
-#' @param refreshColor The colour of the refresh text link
+#' @param refreshColour The colour of the refresh text link
 #' @param css Any additional CSS rules to apply to the message box. For example,
 #' `css = "padding: 0 !important; border: 3px solid red;"` will remove padding and add a border.
 #' Note that you may need to use the `!important` rule to override default styles.
