@@ -1,7 +1,7 @@
 library(shiny)
 
 share <- list(
-  title = "shinydisconnect package",
+  title = "{shinydisconnect} package",
   url = "https://daattali.com/shiny/shinydisconnect-demo/",
   image = "https://daattali.com/shiny/img/shinydisconnect.png",
   description = "Show a nice message when a shiny app disconnects or errors",
