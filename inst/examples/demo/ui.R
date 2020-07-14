@@ -53,21 +53,24 @@ fluidPage(
     )
   ),
 
-  fluidRow(column(
-    width = 6, offset = 3,
-    div(
-      id = "main-row",
-      actionButton("show", "Simulate a disconnect", icon("play"), class = "btn-success"),
-      br(), br()
-    )
-  )),
-  fluidRow(column(
-    width = 6, offset = 3,
-    div(
-      actionLink("set1", "Use pre-set parameters #1"), HTML("&middot;"),
-      actionLink("set2", "Use pre-set parameters #2")
-    )
-  )),
+  div(
+    id = "main-row",
+    fluidRow(column(
+      width = 6, offset = 3,
+      div(
+        actionButton("show", "Simulate a disconnect", icon("play"), class = "btn-success"),
+        br(), br()
+      )
+    )),
+    fluidRow(column(
+      width = 6, offset = 3,
+      div(
+        actionButton("set1", "Use pre-set parameters #1", class = "btn-primary"),
+        actionButton("set2", "Use pre-set parameters #2", class = "btn-primary")
+      )
+    ))
+  ),
+
   fluidRow(
     column(
       3,
