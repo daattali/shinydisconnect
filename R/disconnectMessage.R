@@ -7,7 +7,7 @@
 #' anywhere in a Shiny app's UI to add a nice message when this happens. Works
 #' locally (running Shiny apps within RStudio) and on Shiny servers (such as shinyapps.io,
 #' RStudio Connect, Shiny Server Open Source, Shiny Server Pro).\cr\cr
-#' See the [demo Shiny app](https://daattali.com/shiny/shinydisconnect-demo) online for examples.\cr\cr
+#' See the [demo Shiny app](https://daattali.com/shiny/shinydisconnect-demo/) online for examples.\cr\cr
 #' Note that it's not possible to distinguish between errors and timeouts - they will both
 #' show the same message.
 #'

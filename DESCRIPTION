@@ -9,7 +9,7 @@ Description: A 'Shiny' app can disconnect for a variety of reasons: an unrecover
     call `disonnectMessage()` anywhere in a Shiny app's UI to add a nice message when this happens. 
     Works locally (running Shiny apps within RStudio) and on Shiny servers (such as shinyapps.io,
     RStudio Connect, Shiny Server Open Source, Shiny Server Pro). See demo online at 
-    <https://daattali.com/shiny/shinydisconnect-demo>.
+    <https://daattali.com/shiny/shinydisconnect-demo/>.
 URL: https://github.com/daattali/shinydisconnect
 BugReports: https://github.com/daattali/shinydisconnect/issues
 Imports: 
