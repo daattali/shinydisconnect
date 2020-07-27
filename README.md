@@ -25,9 +25,20 @@ A shiny app can disconnect for a variety of reasons: an unrecoverable error occu
 
 # Table of contents
 
+- [The problem](#problem)
 - [Examples](#examples)
 - [Installation](#install)
 - [How to use](#usage)
+
+<h2 id="problem">The problem</h2>
+
+Have you ever noticed how an error in your Shiny app looks very different when it happens locally (in RStudio on your laptop) compared to when it happens in production (in shinyapps.io or Shiny Server or Connect)? Locally, when a Shiny app breaks, you just get a grey screen. But when a deployed app breaks, you also get a little strip that says "Disconnected from server. Reload."
+
+![shiny default message](inst/img/shinydisconnect-default-message.png)
+
+You don't have any control over that message's text or position, and you don't have a way to get that message to appear both locally and in deployed apps.
+
+Well, at least you didn't until now. {shinydisconnect} solves exactly these two issues, by allowing you to show a customized (and pretty!) message when a Shiny app disconnects or errors, regardless of where the app is running.
 
 <h2 id="examples">Examples</h2>
 
