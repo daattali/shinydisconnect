@@ -75,7 +75,9 @@ remotes::install_github("daattali/shinydisconnect")
 
 <h2 id="usage">How to use</h2>
 
-Call `disconnectMessage()` anywhere in a Shiny app's UI to add a nice message when a shiny app disconnects. `disconnectMessage()` has parameters to modify the text, position, and colours of the disconnect message.
+The package only has two functions: `disconnectMessage()` and `disconnectMessage2()`.
+
+Call `disconnectMessage()` anywhere in a Shiny app's UI to add a nice message when a shiny app disconnects. `disconnectMessage()` has many parameters to modify the text, position, and colours of the disconnect message.
 
 Note that it's not possible to distinguish between errors and timeouts - they will both show the same message.
 
@@ -95,3 +97,5 @@ server <- function(input, output, session) {
 }
 shinyApp(ui, server)
 ```
+
+You can use `disconnectMessage2()` as a pre-configured version of `disconnectMessage()` with a specific set of parameters.
