@@ -65,9 +65,9 @@ fluidPage(
     fluidRow(column(
       width = 6, offset = 3,
       div(
-        actionButton("set1", "Use pre-set parameters #1", class = "btn-primary"),
-        actionButton("set2", "Use pre-set parameters #2", class = "btn-primary"),
-        actionButton("set3", "Use pre-set parameters #3", class = "btn-primary")
+        actionButton("set1", "Use configuration #1", class = "btn-primary"),
+        actionButton("set2", "Use configuration #2", class = "btn-primary"),
+        actionButton("set3", "Use configuration #3", class = "btn-primary")
       )
     ))
   ),
