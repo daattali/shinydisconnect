@@ -58,6 +58,13 @@ You can also use `disconnectMessage2()` to get a similar message box to this one
 
 ![special screenshot](inst/img/special.png)
 
+**Example 4: hide the app **
+
+This can be achieved by setting the opactiy to 1 (fully opaque).
+
+![special2 screenshot](inst/img/special2.PNG)
+
+
 <h2 id="install">Installation</h2>
 
 To install the stable CRAN version:
