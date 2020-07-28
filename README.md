@@ -60,7 +60,7 @@ You can also use `disconnectMessage2()` to get a similar message box to this one
 
 **Example 4: hide the app**
 
-This can be achieved by setting the opactiy to 1 (fully opaque).
+This can be achieved by setting the opacity to 1 (fully opaque).
 
 ![special2 screenshot](inst/img/special2.PNG)
 
