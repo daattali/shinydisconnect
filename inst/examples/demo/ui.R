@@ -66,7 +66,8 @@ fluidPage(
       width = 6, offset = 3,
       div(
         actionButton("set1", "Use pre-set parameters #1", class = "btn-primary"),
-        actionButton("set2", "Use pre-set parameters #2", class = "btn-primary")
+        actionButton("set2", "Use pre-set parameters #2", class = "btn-primary"),
+        actionButton("set3", "Use pre-set parameters #3", class = "btn-primary")
       )
     ))
   ),

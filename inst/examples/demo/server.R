@@ -102,4 +102,19 @@ function(input, output, session) {
     updateCheckboxInput(session, "center", value = TRUE)
     updateTextAreaInput(session, "css", value = "padding: 15px !important; box-shadow: none !important;")
   })
+
+  observeEvent(input$set3, {
+    updateTextInput(session, "text", value = "Something went wrong! Try refreshing the page.")
+    updateCheckboxInput(session, "show_refresh", value = TRUE)
+    colourpicker::updateColourInput(session, "background", value = "#000")
+    colourpicker::updateColourInput(session, "colour", value = "#fff")
+    colourpicker::updateColourInput(session, "refreshColour", value = "#337ab7")
+    updateSliderInput(session, "size", value = 24)
+    updateCheckboxInput(session, "show_overlay", value = TRUE)
+    colourpicker::updateColourInput(session, "overlayColour", value = "#000")
+    updateSliderInput(session, "overlayOpacity", value = 1)
+    updateCheckboxInput(session, "full_width", value = FALSE)
+    updateNumericInput(session, "width", value = 450)
+    updateCheckboxInput(session, "center", value = TRUE)
+  })
 }
