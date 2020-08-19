@@ -29,6 +29,7 @@ A shiny app can disconnect for a variety of reasons: an unrecoverable error occu
 - [Examples](#examples)
 - [Installation](#install)
 - [How to use](#usage)
+- [Sponsors 🏆](#sponsors)
 
 <h2 id="problem">The problem</h2>
 
@@ -106,3 +107,14 @@ shinyApp(ui, server)
 ```
 
 You can use `disconnectMessage2()` as a pre-configured version of `disconnectMessage()` with a specific set of parameters.
+
+<h2 id="sponsors">
+
+Sponsors 🏆
+
+</h2>
+
+> There are no sponsors yet
+
+[Become the first sponsor for
+{shinydisconnect}\!](https://github.com/sponsors/daattali)
