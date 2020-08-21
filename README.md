@@ -11,11 +11,11 @@ A shiny app can disconnect for a variety of reasons: an unrecoverable error occu
 {shinydisconnect} allows you to add a nice message to the user when the app disconnects.  The message works both locally (running Shiny apps within RStudio) and on Shiny servers (such as shinyapps.io, RStudio Connect, Shiny Server Open Source, Shiny Server Pro). See the [demo Shiny app](https://daattali.com/shiny/shinydisconnect-demo/) online for examples.
 
 **Need Shiny help? [I’m available for consulting](https://attalitech.com/).**<br/>
-**If you find {shinydisconnect} useful, please consider supporting my work\! ❤**
+**If you find {shinydisconnect} useful, please consider [supporting my work](https://github.com/sponsors/daattali/sponsorships?tier_id=39852) to unlock rewards\! ❤**
 
 <p align="center">
 
-<a style="display: inline-block; margin-left: 10px;" href="https://github.com/sponsors/daattali">
+<a style="display: inline-block; margin-left: 10px;" href="https://github.com/sponsors/daattali/sponsorships?tier_id=39852">
 <img height="35" src="https://i.imgur.com/034B8vq.png" /> </a>
 
 <a style="display: inline-block;" href="https://paypal.me/daattali">
@@ -118,4 +118,4 @@ Sponsors 🏆
 > There are no sponsors yet
 
 [Become the first sponsor for
-{shinydisconnect}\!](https://github.com/sponsors/daattali)
+{shinydisconnect}\!](https://github.com/sponsors/daattali/sponsorships?tier_id=39856)
