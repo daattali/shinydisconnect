@@ -1,17 +1,11 @@
 getLocalTags <- function() {
+  shiny::addResourcePath("shinydiscon", system.file("src", package = "shinydisconnect"))
+  js <- htmltools::tags$head(htmltools::tags$script(src = "shinydiscon/js/shinydisconnect.js"))
   if (!isLocal()) {
-    return(NULL)
+    return(js)
   }
-
   htmltools::tagList(
-    htmltools::tags$script(paste0(
-      "$(function() {",
-      "  $(document).on('shiny:disconnected', function(event) {",
-      "    $('#ss-connect-dialog').show();",
-      "    $('#ss-overlay').show();",
-      "  })",
-      "});"
-    )),
+    js,
     htmltools::tags$div(
       id="ss-connect-dialog", style="display: none;",
       htmltools::tags$a(id="ss-reload-link", href="#", onclick="window.location.reload(true);")

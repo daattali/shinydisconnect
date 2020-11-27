@@ -98,7 +98,12 @@ disconnectMessage <- function(
         glue::glue(
           .open = "{{", .close = "}}",
 
-          "#shiny-disconnected-overlay { display: none !important; }",
+           "#shiny-disconnected-overlay {
+              background-color: transparent;
+              z-index: 99997 !important;
+              cursor: not-allowed !important;
+              pointer-events: auto !important;
+           }",
 
           "#ss-overlay {
              background-color: {{overlayColour}} !important;
@@ -132,8 +137,6 @@ disconnectMessage <- function(
              box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px !important;
           }",
 
-          "#ss-connect-dialog::before { content: '{{text}}' }",
-
           "#ss-connect-dialog label { display: none !important; }",
 
           "#ss-connect-dialog a {
@@ -148,6 +151,10 @@ disconnectMessage <- function(
             content: '{{refresh}}';
             font-size: {{size}}px;
           }",
+
+          ".shiny-discon::before { content: '{{text}}' }",
+
+          ".shiny-discon-noserver::before { content: 'Cannot connect to the server' }",
 
           "#ss-connect-dialog { {{ htmltools::HTML(css) }} }"
         )
