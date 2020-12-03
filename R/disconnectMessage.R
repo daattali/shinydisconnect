@@ -91,9 +91,12 @@ disconnectMessage <- function(
     stop("disconnectMessage: 'top' must be either an integer, or the string \"center\".", call. = FALSE)
   }
 
+  shiny::addResourcePath("shinydiscon", system.file("assets", package = "shinydisconnect"))
+
   htmltools::tagList(
     getLocalTags(),
     htmltools::tags$head(
+      htmltools::tags$script(src = "shinydiscon/js/shinydisconnect.js"),
       htmltools::tags$style(
         glue::glue(
           .open = "{{", .close = "}}",

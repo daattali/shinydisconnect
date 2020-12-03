@@ -18,8 +18,8 @@ $(function() {
       clearInterval(disconCheck);
       showDiscon();
       $('#ss-connect-dialog')
-      .removeClass('shiny-discon')
-      .addClass("shiny-discon-noserver");
+        .removeClass('shiny-discon')
+        .addClass("shiny-discon-noserver");
     }
     // if server detected, delete this checker
     if(typeof Shiny !== undefined){
