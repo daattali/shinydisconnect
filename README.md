@@ -2,7 +2,6 @@
 
 [![CRAN
 version](https://www.r-pkg.org/badges/version/shinydisconnect)](https://cran.r-project.org/package=shinydisconnect)
-[![Build Status](https://travis-ci.org/daattali/shinydisconnect.svg?branch=master)](https://travis-ci.org/daattali/shinydisconnect)
 
 > [Demo](https://daattali.com/shiny/shinydisconnect-demo/) &middot; Created by [Dean Attali](https://deanattali.com)
 
