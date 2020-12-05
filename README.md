@@ -2,6 +2,8 @@
 
 [![CRAN
 version](https://www.r-pkg.org/badges/version/shinydisconnect)](https://cran.r-project.org/package=shinydisconnect)
+[![R build status](https://github.com/daattali/shinydisconnect/workflows/R-CMD-check/badge.svg)](https://github.com/daattali/shinydisconnect/actions)
+
 
 > [Demo](https://daattali.com/shiny/shinydisconnect-demo/) &middot; Created by [Dean Attali](https://deanattali.com)
 
