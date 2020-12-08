@@ -7,7 +7,7 @@ $(document).on('shiny:disconnected', function(event) {
   showDiscon();
 });
 
-$(function() {
+$(document).ready(function(){
   let disconCheck;
   let num = 0;
   // 3s to check if shiny server is connected
@@ -23,9 +23,9 @@ $(function() {
     }
     // if server detected, delete this checker
     if(typeof Shiny !== undefined){
-      if(Shiny.shinyapp.$socket !== null) {
-        clearInterval(disconCheck);
-      }
+        if(Shiny.shinyapp.$socket.readyState === 1){
+          clearInterval(disconCheck);
+        }
     }
   }, 1000);
 });
