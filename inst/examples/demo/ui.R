@@ -1,5 +1,4 @@
 library(shiny)
-
 share <- list(
   title = "{shinydisconnect} package",
   url = "https://daattali.com/shiny/shinydisconnect-demo/",
