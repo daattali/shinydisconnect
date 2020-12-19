@@ -11,14 +11,6 @@ fluidPage(
   title = paste0(share$title, " ", as.character(packageVersion("shinydisconnect"))),
   tags$head(
     includeCSS(file.path('www', 'style.css')),
-    tags$script(
-    "
-      $(document).on('shiny:disconnected', function(event){
-        setTimeout(function() {
-          Shiny.shinyapp.$socket = 'fake';
-        }, 1000);
-      });
-    "),
     # Favicon
     tags$link(rel = "shortcut icon", type="image/x-icon", href="https://daattali.com/shiny/img/favicon.ico"),
     # Facebook OpenGraph tags
