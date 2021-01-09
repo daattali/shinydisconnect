@@ -1,8 +1,10 @@
 Package: shinydisconnect
 Title: Show a Nice Message When a 'Shiny' App Disconnects or Errors
 Version: 0.1.0
-Authors@R: person(given = "Dean", family = "Attali", email = "daattali@gmail.com",
-    role = c("aut", "cre", "cph"))
+Authors@R: person(given = "Dean", family = "Attali",
+    email = "daattali@gmail.com",
+    role = c("aut", "cre", "cph"),
+    comment = c(ORCID="0000-0002-5645-3493"))
 Description: A 'Shiny' app can disconnect for a variety of reasons: an unrecoverable error occurred in
     the app, the server went down, the user lost internet connection, or any other reason
     that might cause the 'Shiny' app to lose connection to its server. With 'shinydisconnect', you can
