@@ -1,6 +1,6 @@
 Package: shinydisconnect
 Title: Show a Nice Message When a 'Shiny' App Disconnects or Errors
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: person(given = "Dean", family = "Attali",
     email = "daattali@gmail.com",
     role = c("aut", "cre", "cph"),
