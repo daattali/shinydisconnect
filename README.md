@@ -1,42 +1,54 @@
-# {shinydisconnect} - Show a nice message when a Shiny app disconnects or errors
+<h3 align="center">shinydisconnect</h3>
+<h4 align="center">
+  🔌 Show a nice message when a Shiny app disconnects or errors
+  <br><br>
+  <a href="https://daattali.com/shiny/shinydisconnect-demo/">Demo</a>
+  &middot;
+  by <a href="https://deanattali.com">Dean Attali</a>
+</h4>
 
-[![CRAN
-version](https://www.r-pkg.org/badges/version/shinydisconnect)](https://cran.r-project.org/package=shinydisconnect)
-[![R build status](https://github.com/daattali/shinydisconnect/workflows/R-CMD-check/badge.svg)](https://github.com/daattali/shinydisconnect/actions)
+<p align="center">
+  <a href="https://github.com/daattali/shinydisconnect/actions">
+    <img src="https://github.com/daattali/shinydisconnect/workflows/R-CMD-check/badge.svg" alt="R build status" />
+  </a> 
+  <a href="https://cran.r-project.org/package=shinydisconnect">
+    <img src="https://www.r-pkg.org/badges/version/shinydisconnect" alt="CRAN version" />
+  </a>
+</p>
 
-
-> [Demo](https://daattali.com/shiny/shinydisconnect-demo/) &middot; Created by [Dean Attali](https://deanattali.com)
+---
 
 A shiny app can disconnect for a variety of reasons: an unrecoverable error occurred in the app, the server went down, the user lost internet connection, or any other reason that might cause the shiny app to lose connection to its server.
 
 {shinydisconnect} allows you to add a nice message to the user when the app disconnects.  The message works both locally (running Shiny apps within RStudio) and on Shiny servers (such as shinyapps.io, RStudio Connect, Shiny Server Open Source, Shiny Server Pro). See the [demo Shiny app](https://daattali.com/shiny/shinydisconnect-demo/) online for examples.
 
-**Need Shiny help? [I’m available for consulting](https://attalitech.com/).**<br/>
-**If you find {shinydisconnect} useful, please consider [supporting my work](https://github.com/sponsors/daattali/sponsorships?tier_id=39852) to unlock rewards\! ❤**
+**Need Shiny help? [I'm available for consulting](https://attalitech.com/).**<br/>
+**If you find {shinydisconnect} useful, please consider [supporting my work](https://github.com/sponsors/daattali)! ❤**
 
 <p align="center">
-
-<a style="display: inline-block; margin-left: 10px;" href="https://github.com/sponsors/daattali/sponsorships?tier_id=39852">
-<img height="35" src="https://i.imgur.com/034B8vq.png" /> </a>
-
-<a style="display: inline-block;" href="https://paypal.me/daattali">
-<img height="35" src="https://camo.githubusercontent.com/0e9e5cac101f7093336b4589c380ab5dcfdcbab0/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f74776f6c66736f6e2f70617970616c2d6769746875622d627574746f6e40312e302e302f646973742f627574746f6e2e737667" />
-</a>
-
+  <a style="display: inline-block;" href="https://github.com/sponsors/daattali">
+    <img height="35" src="https://i.imgur.com/034B8vq.png" />
+  </a>
+  <a style="display: inline-block;" href="https://paypal.me/daattali">
+    <img height="35" src="https://camo.githubusercontent.com/0e9e5cac101f7093336b4589c380ab5dcfdcbab0/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f74776f6c66736f6e2f70617970616c2d6769746875622d627574746f6e40312e302e302f646973742f627574746f6e2e737667" />
+  </a>
 </p>
 
-> This package is part of a larger ecosystem of packages with a shared vision: solving common Shiny issues and improving Shiny apps with minimal effort, minimal code changes, and straightforward documentation. Other packages for your Shiny apps:
+> This package is part of a larger ecosystem of packages with a shared vision: solving common Shiny issues and improving Shiny apps with minimal effort, minimal code changes, and clear documentation. Other packages for your Shiny apps:
 
 | Package | Description | Demo |
 |---|---|---|
 | [shinyjs](https://deanattali.com/shinyjs/) | 💡 Easily improve the user experience of your Shiny apps in seconds | [🔗](https://deanattali.com/shinyjs/overview#demo) |
-| [shinyalert](https://github.com/daattali/shinyalert) | 🗯️ Easily create pretty popup messages (modals) in Shiny | [🔗](https://daattali.com/shiny/shinyalert-demo/) |
+| [shinyalert](https://github.com/daattali/shinyalert/) | 🗯️ Easily create pretty popup messages (modals) in Shiny | [🔗](https://daattali.com/shiny/shinyalert-demo/) |
 | [shinyscreenshot](https://github.com/daattali/shinyscreenshot/) | 📷 Capture screenshots of entire pages or parts of pages in Shiny apps | [🔗](https://daattali.com/shiny/shinyscreenshot-demo/) |
 | [timevis](https://github.com/daattali/timevis/) | 📅 Create interactive timeline visualizations in R | [🔗](https://daattali.com/shiny/timevis-demo/) |
 | [shinycssloaders](https://github.com/daattali/shinycssloaders/) | ⌛ Add loading animations to a Shiny output while it's recalculating | [🔗](https://daattali.com/shiny/shinycssloaders-demo/) |
 | [colourpicker](https://github.com/daattali/colourpicker/) | 🎨 A colour picker tool for Shiny and for selecting colours in plots | [🔗](https://daattali.com/shiny/colourInput/) |
 | [shinybrowser](https://github.com/daattali/shinybrowser/) | 🌐 Find out information about a user's web browser in Shiny apps | [🔗](https://daattali.com/shiny/shinybrowser-demo/) |
+| [shinytip](https://github.com/daattali/shinytip/) | 💬 Simple flexible tooltips for Shiny apps | WIP |
+| [shinymixpanel](https://github.com/daattali/shinymixpanel/) | 🔍 Track user interactions with Mixpanel in Shiny apps or R scripts | WIP |
 | [shinyforms](https://github.com/daattali/shinyforms/) | 📝 Easily create questionnaire-type forms with Shiny | WIP |
+
 
 # Table of contents
 
@@ -83,15 +95,15 @@ This can be achieved by setting the opacity to 1 (fully opaque).
 
 <h2 id="install">Installation</h2>
 
-To install the stable CRAN version:
+**For most users:** To install the stable CRAN version:
 
-```
+```r
 install.packages("shinydisconnect")
 ```
 
-To install the latest development version from GitHub:
+**For advanced users:** To install the latest development version from GitHub:
 
-```
+```r
 install.packages("remotes")
 remotes::install_github("daattali/shinydisconnect")
 ```
