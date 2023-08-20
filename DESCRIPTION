@@ -12,7 +12,7 @@ Description: A 'Shiny' app can disconnect for a variety of reasons: an unrecover
     Works locally (running Shiny apps within 'RStudio') and on Shiny servers (such as shinyapps.io,
     'RStudio Connect', 'Shiny Server Open Source', 'Shiny Server Pro'). See demo online at 
     <https://daattali.com/shiny/shinydisconnect-demo/>.
-URL: https://github.com/daattali/shinydisconnect
+URL: https://github.com/daattali/shinydisconnect, https://daattali.com/shiny/shinydisconnect-demo/
 BugReports: https://github.com/daattali/shinydisconnect/issues
 Imports: 
     checkmate,
@@ -27,4 +27,4 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.0
+RoxygenNote: 7.2.3
